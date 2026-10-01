@@ -1,6 +1,19 @@
 # 🚀 개인 통합 포털 대시보드 (My Portal Dashboard)
 
-`https://jigeum.pythonanywhere.com/` 사이트의 소스 코드 및 데이터 전체를 깃허브(GitHub)에 업로드하고 배포할 수 있도록 구성된 풀스택 웹 애플리케이션 프로젝트입니다.
+> 🌐 **라이브 대시보드 사이트 바로가기**  
+> - **GitHub Pages (라이브 호스팅):** [https://poiuyfgfhj333-code.github.io/agingPrac/](https://poiuyfgfhj333-code.github.io/agingPrac/)  
+> - **PythonAnywhere 서버:** [https://jigeum.pythonanywhere.com/](https://jigeum.pythonanywhere.com/)  
+
+---
+
+## ⚡ GitHub Pages 라이브 사이트 활성화 방법 (GitHub 1초 설정)
+
+깃허브 저장소 방문자가 링크를 클릭해 사이트를 바로 볼 수 있도록 GitHub Pages를 활성화하는 방법입니다.
+
+1. 본인 저장소([https://github.com/poiuyfgfhj333-code/agingPrac](https://github.com/poiuyfgfhj333-code/agingPrac)) 상단의 **⚙️ Settings** 탭 클릭
+2. 좌측 메뉴에서 **Pages** 클릭
+3. **Build and deployment** 항목 아래 **Branch**를 `None` -> `main` 으로 변경 후 **Save** 클릭
+4. 약 1분 후 `https://poiuyfgfhj333-code.github.io/agingPrac/` 링크로 접속하면 웹사이트가 그대로 실시간 구동됩니다!
 
 ---
 
@@ -34,18 +47,19 @@
 
 ```
 jigeum-portal/
+├── index.html             # GitHub Pages 및 웹 메인 엔트리 포인트
 ├── app.py                 # Flask 백엔드 서버 (REST API & 라우팅)
 ├── wsgi.py                # WSGI 배포 엔트리 포인트 (PythonAnywhere, Gunicorn 등)
 ├── requirements.txt       # Python 의존성 패키지 목록
 ├── README.md              # 프로젝트 안내 및 GitHub 업로드 가이드
 ├── .gitignore             # Git 제외 파일 설정
 ├── templates/
-│   └── index.html         # 대시보드 메인 HTML 템플릿
+│   └── index.html         # Flask 템플릿
 ├── static/
 │   ├── css/
 │   │   └── style.css      # 커스텀 스타일시트
 │   └── js/
-│       └── app.js         # 대시보드 프론트엔드 애플리케이션 로직
+│       └── app.js         # 대시보드 프론트엔드 애플리케이션 로직 (정적 JSON 자동 폴백 지원)
 ├── data/
 │   ├── sites.json         # 북마크 사이트 데이터
 │   ├── courses.json       # 수강 과목 및 강의계획서 데이터
@@ -60,8 +74,8 @@ jigeum-portal/
 
 ### 1. 레포지토리 클론 및 이동
 ```bash
-git clone https://github.com/사용자이름/레포지토리이름.git
-cd jigeum-portal
+git clone https://github.com/poiuyfgfhj333-code/agingPrac.git
+cd agingPrac
 ```
 
 ### 2. 가상환경 생성 및 의존성 설치
@@ -80,47 +94,3 @@ pip install -r requirements.txt
 python app.py
 ```
 브라우저에서 `http://localhost:5000` 접속 후 사용합니다.
-
----
-
-## 📤 깃허브(GitHub)에 업로드하는 방법
-
-### 1단계: Git 저장소 초기화 및 커밋
-터미널에서 이 프로젝트 폴더(`jigeum-portal`)로 이동 후 실행:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit: My Portal Dashboard full source and data"
-```
-
-### 2단계: GitHub 새 레포지토리 생성
-1. [GitHub](https://github.com/) 접속 후 **New repository** 클릭
-2. Repository name 입력 (예: `jigeum-portal`)
-3. Public 선택 후 **Create repository** 클릭
-
-### 3단계: GitHub에 코드 푸시 (Push)
-```bash
-git branch -M main
-git remote add origin https://github.com/본인계정명/jigeum-portal.git
-git push -u origin main
-```
-
----
-
-## 🌐 PythonAnywhere에 재배포하는 방법
-
-1. PythonAnywhere 대시보드에서 **Bash console** 열기
-2. 깃허브 코드 클론:
-   ```bash
-   git clone https://github.com/본인계정명/jigeum-portal.git
-   ```
-3. **Web** 탭 -> **WSGI configuration file** 편집:
-   ```python
-   import sys
-   path = '/home/본인아이디/jigeum-portal'
-   if path not in sys.path:
-       sys.path.append(path)
-   from app import app as application
-   ```
-4. **Reload** 버튼 클릭

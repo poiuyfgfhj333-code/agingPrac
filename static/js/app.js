@@ -565,7 +565,7 @@ const SITE_COLOR_PALETTES = [
 
 async function loadSites() {
   try {
-    const res = await fetch('/api/sites');
+    let res = await fetch('/api/sites'); if (!res.ok) res = await fetch('./data/sites.json');
     const json = await res.json();
     if (json.success) {
       STATE.siteCategories = json.categories || [];
@@ -1194,7 +1194,7 @@ function parseSchedule(classTimeStr) {
 // ----------------------------------------------------------------------------
 async function loadCourses() {
   try {
-    const res = await fetch('/api/courses');
+    let res = await fetch('/api/courses'); if (!res.ok) res = await fetch('./data/courses.json');
     const data = await res.json();
     if (data.success) {
       STATE.courses = data.courses;
@@ -2010,7 +2010,7 @@ function toggleAllScheduleCategories() {
 
 async function loadSchedules() {
   try {
-    const res = await fetch('/api/schedules');
+    let res = await fetch('/api/schedules'); if (!res.ok) res = await fetch('./data/schedules.json');
     const data = await res.json();
     if (data.success) {
       STATE.schedules = data.schedules;
