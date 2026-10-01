@@ -1,0 +1,128 @@
+{
+  "categories": [
+    {
+      "color": "text-blue-400",
+      "id": "lms",
+      "title": "LMS (온라인 강의실)"
+    },
+    {
+      "color": "text-cyan-400",
+      "id": "pknu",
+      "title": "부경대 포털 및 홈페이지"
+    },
+    {
+      "color": "text-rose-400",
+      "id": "dept",
+      "title": "학과별 홈페이지"
+    },
+    {
+      "color": "text-emerald-400",
+      "id": "research",
+      "title": "연구 관련"
+    }
+  ],
+  "sites": [
+    {
+      "category": "lms",
+      "id": "pknu-lms",
+      "title": "부경대 LMS",
+      "url": "https://lms.pknu.ac.kr/ilos/main/main_form.acl"
+    },
+    {
+      "category": "lms",
+      "id": "inu-huss",
+      "title": "인천대 HUSS",
+      "url": "https://lms.hussis.ac.kr/login/index.php"
+    },
+    {
+      "category": "lms",
+      "id": "hansapyung",
+      "title": "한국사이버평생교육원",
+      "url": "https://www.hakjum.com/index.asp"
+    },
+    {
+      "category": "pknu",
+      "id": "pknu-main",
+      "title": "부경대 대표홈페이지",
+      "url": "https://www.pknu.ac.kr/main"
+    },
+    {
+      "category": "pknu",
+      "id": "pknu-portal",
+      "title": "부경대 종합포털",
+      "url": "https://portal.pknu.ac.kr/"
+    },
+    {
+      "category": "pknu",
+      "id": "pknu-library",
+      "title": "부경대 도서관",
+      "url": "https://libweb.pknu.ac.kr/"
+    },
+    {
+      "category": "dept",
+      "id": "pknu-welfare",
+      "title": "사회복지학전공",
+      "url": "https://icms.pknu.ac.kr/ps1/1"
+    },
+    {
+      "category": "dept",
+      "id": "pknu-bme",
+      "title": "의공학전공",
+      "url": "https://bme.pknu.ac.kr/bme/1"
+    },
+    {
+      "category": "dept",
+      "id": "pknu-huss-dept",
+      "title": "HUSS 포용사회융합전공",
+      "url": "https://icms.pknu.ac.kr/huss/1"
+    },
+    {
+      "category": "research",
+      "id": "google-scholar",
+      "title": "Google Scholar",
+      "url": "https://scholar.google.com/?hl=ko"
+    },
+    {
+      "category": "research",
+      "id": "dbpia",
+      "title": "DBpia",
+      "url": "https://www.dbpia.co.kr/"
+    },
+    {
+      "category": "research",
+      "id": "pknu-biophysics",
+      "title": "Computational Biophysics Lab",
+      "url": "https://icms.pknu.ac.kr/biophysics/1"
+    },
+    {
+      "category": "research",
+      "id": "site_84f24ccf",
+      "title": "Sci-Hub",
+      "url": "https://sci-hub.kr/"
+    },
+    {
+      "category": "research",
+      "id": "site_de605fcf",
+      "title": "Pubmed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/"
+    },
+    {
+      "category": "research",
+      "id": "site_ab748b7b",
+      "title": "Scopus",
+      "url": "https://www.scopus.com/sources"
+    },
+    {
+      "category": "research",
+      "id": "site_dcac8e8c",
+      "title": "한국멀티미디어학회",
+      "url": "https://kmms.or.kr/"
+    },
+    {
+      "category": "lms",
+      "id": "site_d2aabda2",
+      "title": "자료구조 과제",
+      "url": "https://app.notion.com/p/3dcfa5ad8b728046bcf1c03c53942cc4"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "color": "blue",
+    "id": "course",
+    "title": "수강 과목 시간표"
+  },
+  {
+    "color": "amber",
+    "id": "academic",
+    "title": "학사 일정"
+  },
+  {
+    "color": "rose",
+    "id": "exam",
+    "title": "시험 및 과제"
+  },
+  {
+    "color": "emerald",
+    "id": "personal",
+    "title": "개인 일정"
+  },
+  {
+    "color": "purple",
+    "id": "club",
+    "title": "동아리 / 연구"
+  }
+]
